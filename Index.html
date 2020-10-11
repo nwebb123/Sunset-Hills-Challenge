@@ -69,30 +69,31 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <input id="txtSunsetIn1" placeholder="Enter Building Height Here" value="" />
+                <input id="userInput0" placeholder="Enter Building Height" />
             </div>
             <div class="col">
-                <input id="txtSunsetIn2" placeholder="Enter Building Height Here" value="" />
+                <input id="userInput1" placeholder="Enter Building Height" />
             </div>
             <div class="col">
-                <input id="txtSunsetIn3" placeholder="Enter Building Height Here" value="" />
+                <input id="userInput2" placeholder="Enter Building Height" />
             </div>
             <div class="col">
-                <input id="txtSunsetIn4" placeholder="Enter Building Height Here" value="" />
+                <input id="userInput3" placeholder="Enter Building Height" />
             </div>
             <div class="col">
-                <input id="txtSunsetIn5" placeholder="Enter Building Height Here" value="" />
+                <input id="userInput4" placeholder="Enter Building Height" />
             </div>
             <!--Button-->
             <div class="col">
-                <button id="btnSunset" class="btn btn-dark">Click Me</button>
+                <button id="btnSunset" class="btn btn-dark" onclick="Sunset()">Click Me</button>
             </div>
         </div>
         <hr />
 
         <div class="row">
             <div class="col">
-                <p id="pSunsetOut"></p>
+                <p id="output1"></p>
+                <p id="output2"></p>
             </div>
         </div>
     </div>
@@ -118,55 +119,51 @@
 
 
 
+
+
+    
     <script>
-        //Step 1: Add an event listener for the button
-        document.getElementById("").addEventListener("", function () {
-
-        });
-
-
         
+        function Sunset() {
+
+            let bldgHeight0 = parseInt(document.getElementById("userInput0").value);
+            let bldgHeight1 = parseInt(document.getElementById("userInput1").value);
+            let bldgHeight2 = parseInt(document.getElementById("userInput2").value);
+            let bldgHeight3 = parseInt(document.getElementById("userInput3").value);
+            let bldgHeight4 = parseInt(document.getElementById("userInput4").value);
+
+            let bldgArray = [bldgHeight0, bldgHeight1, bldgHeight2, bldgHeight3, bldgHeight4];
+
+
+            let highestBldg = 0
+            let outputArrayThatCanSeeSun = []
+            let countCanSeeTheSun = [1]
+
+            for (i = 0; i < bldgArray.length; i++) {
+
+                if (bldgArray[i] > highestBldg) {
+                    outputArrayThatCanSeeSun.push(bldgArray[i]) ;
+                    highestBldg = bldgArray[i];
+
+                }
+            }
+            document.getElementById("output1").innerHTML = `The buildings that can see the sun are: ${outputArrayThatCanSeeSun} . ` ;
+        }
 
 
 
 
-
-
-
-        //Step 2: Gather up the user input and stuff it into an array
-        let bldgHeight1 = parseInt(document.getElementById("txtSunsetIn1").value);
-        2
-        3
-        4
-        5
-
-        //This is the easy way to create the array
-        var bldgArray = [bldgheight, ...bldgHeight5];
-
-
-        //var bldgArray = new Array();
-        //bldgArray.push(bldgHeight1);    //Array should have 1 value? 
-        //2
-        //3
-        //4
-        //5
-
-
-        //var bldgArray2 = [bldgHeight1, bldgHeight2, etc]
-        //or
+        //        }
+        //        else {
+        //            highestBldg = bldgArray[i];
+        //            (true);
+        //        }   
+        //    };
+        //    return output1;
+        //}
+            
+          
        
-
-
-
-        var array2 = [1, 2, 3, 4, 5];   //Variable instantiation; created on one line
-        array2.push(6) //[1,2,3,4,5,6]
-
-
-
-        var
-
-
-
         //Step 3(THE HARD PART): Taverse the array, from right to left, and keep track of the buildings that can see the sunset
 
 
@@ -182,7 +179,11 @@
 
 
 
-        for (//loop variable; loop exit criteria; loop variable incrment or decrement) {
+        
+
+
+
+
             //let bldg1 = bldgArray[loop variable];
             //}
 
