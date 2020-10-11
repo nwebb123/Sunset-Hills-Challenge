@@ -139,7 +139,7 @@
             let outputArrayThatCanSeeSun = []
             let countCanSeeTheSun = [1]
 
-            for (i = 0; i < bldgArray.length; i++) {
+            for (i = 0; i <= bldgArray.length; i++) {
 
                 if (bldgArray[i] > highestBldg) {
                     outputArrayThatCanSeeSun.push(bldgArray[i]) ;
@@ -147,7 +147,7 @@
 
                 }
             }
-            document.getElementById("output1").innerHTML = `The buildings that can see the sun are: ${outputArrayThatCanSeeSun} . ` ;
+            document.getElementById("output1").innerHTML = `${outputArrayThatCanSeeSun.length} buildings can see the sun. The buildings that can see the sun are: ${outputArrayThatCanSeeSun } . ` ;
         }
 
 
