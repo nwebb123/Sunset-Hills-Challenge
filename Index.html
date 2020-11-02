@@ -26,7 +26,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="/Index.html">Sunset Hills Challenge</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,10 @@
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Sunset Hills</h1>
                 <blockquote class="blockquote">
-                    As the sun sets in the west (left side), which buildings will be able to see the sunset? Enter each building's height in stories to find out!
+                    Imagine you're facing north and looking at five buildings of varying heights. 
+                    As the sun sets (left side of your screen!), which buildings will be able to 
+                    see the sunset? Which buildings will be blocked by the others? Enter each 
+                    building's height in stories to find out!
                 </blockquote>
             </div>
         </div>
@@ -91,8 +94,12 @@
                 <input id="userInput5" placeholder="Enter Building Height" type="number" />
             </div>
             <!--Button-->
-            <div class="col-lg-2">
-                <button id="btnSunset" class="btn btn-dark btn-lg" onclick="Sunset()">Click Me</button>
+            <div class="col-lg">
+                <button id="btnSunset" class="btn btn-danger btn-lg" onclick="Sunset()">Check</button>
+            </div>
+
+            <div class="col-lg">
+                <button id="clearBtn" class="btn btn-warning btn-lg" onclick="clearIt()">Clear</button>
             </div>
         </div>
         <hr />

@@ -71,7 +71,6 @@
     <Content Include="img\apple-touch-icon.png" />
     <Content Include="img\favicon.png" />
     <Content Include="Index.html" />
-    <Content Include="Scripts\barchart.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Solve.html" />
     <Content Include="Styles\styles.css" />
